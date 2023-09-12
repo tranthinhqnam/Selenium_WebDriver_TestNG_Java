@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class Topic_02_Selenium_Locator {
+public class Topic_02_Run_On_Browser {
     WebDriver driver;
 
     @BeforeClass
