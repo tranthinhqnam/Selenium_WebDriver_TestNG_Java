@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -39,7 +40,7 @@ public class Topic_03_Selenium_Locator {
         //Selenium Locator
         driver.findElement(By.id("send2")).click();
 
-        //verify email error message xuat hien
+        //verify email error message xuat hienTopic_03_Selenium_Locator
          Assert.assertTrue(driver.findElement(By.id("advice-required-entry-email")).isDisplayed());
     }
     @Test
@@ -76,4 +77,8 @@ public class Topic_03_Selenium_Locator {
         Assert.assertTrue(driver.findElement(By.id("email")).isDisplayed());
     }
 
+    @AfterClass
+    public void afterClass(){
+        driver.quit();
+    }
 }
